@@ -39,11 +39,11 @@ Enhance the recommendations with real-world metadata
 ##### Note : A valid TMDB API key is required to access the movie data. The key is securely managed in the backend and is not exposed publicly.
 
 ### How it Works : 
-The user selects or searches for a movie from the dropdown list
+The user selects or searches for a movie from the dropdown list.
 
-The app uses cosine similarity to identify the top 10 most similar movies from the dataset
+The ML model computes cosine similarity based on movie metadata.
 
-These recommendations are displayed in two rows, each containing 5 movies, along with their posters and titles
+The app returns 10 visually rich recommendations (with posters and names), in a 2-row layout.
 
 Live Project
 🎥 Try it out here:
