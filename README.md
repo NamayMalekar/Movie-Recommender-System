@@ -1,10 +1,11 @@
-🎬 Movie Recommendation System
+# 🎬 Movie Recommendation System :
+
 This is a machine learning-powered movie recommendation system that suggests the top 10 similar movies based on a user's selected title. Built using Python and a clean Streamlit interface, it lets users quickly discover movies similar to the one they love.
 
 👉 [Live Demo on Render](https://movie-recommender-system-1-h7uj.onrender.com)
 
 
-## 🔍 Features
+### 🔍 Features
 🔎 Search any movie from the database and receive top 10 similar recommendations
 
 🧠 Uses content-based filtering with machine learning
@@ -15,7 +16,7 @@ This is a machine learning-powered movie recommendation system that suggests the
 
 ☁️ Hosted on Render for easy web access
 
-🛠️ Tech Stack
+### 🛠️ Tech Stack
 Python (core logic and data handling)
 
 Pandas, Scikit-learn for data manipulation & ML
@@ -26,7 +27,7 @@ Render for cloud deployment
 
 TMDB API for fetching movie details and posters
 
-📊 Data & API
+### 📊 Data & API
 The movie data is based on a dataset retrieved from The Movie Database (TMDB)
 
 The application uses the TMDB API to fetch:
@@ -39,7 +40,7 @@ Metadata used for recommendations
 
 🔐 Note: A valid TMDB API key is required to fetch data. The key is securely handled in the backend and not exposed to users.
 
-🚀 How it Works
+### 🚀 How it Works
 User selects a movie title
 
 The ML model computes cosine similarity based on movie metadata
