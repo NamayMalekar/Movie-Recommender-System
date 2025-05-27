@@ -65,30 +65,53 @@ with col_btn2:
 
 # Show recommendations fullscreen
 if recommend_clicked:
-    # Centered spinner
-    with st.spinner("🔄 Fetching recommendations..."):
-        try:
-            names, posters = recommend(selected_movie)
+    # Create a placeholder for the loading spinner
+    loading_placeholder = st.empty()
 
-            # Heading centered
-            st.markdown(
-                "<h3 style='text-align: center;'>Recommended Movies</h3>",
-                unsafe_allow_html=True
-            )
+    # Show custom centered spinner using HTML
+    loading_placeholder.markdown(
+        """
+        <div style='display: flex; justify-content: center; align-items: center; height: 100px;'>
+            <div style='text-align: center; font-size: 20px;'>
+                🔄 Fetching recommendations...
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-            # First row: first 5 recommendations
-            row1 = st.columns(5)
-            for i in range(5):
-                with row1[i]:
-                    st.image(posters[i], use_container_width=True)
-                    st.markdown(f"<p style='text-align: center;'>{names[i]}</p>", unsafe_allow_html=True)
+    try:
+        # Simulate loading (optional, remove in real app)
+        # import time
+        # time.sleep(2)
 
-            # Second row: next 5 recommendations
-            row2 = st.columns(5)
-            for i in range(5, 10):
-                with row2[i - 5]:
-                    st.image(posters[i], use_container_width=True)
-                    st.markdown(f"<p style='text-align: center;'>{names[i]}</p>", unsafe_allow_html=True)
+        # Fetch recommendations
+        names, posters = recommend(selected_movie)
 
-        except Exception as e:
-            st.error(f"Something went wrong: {e}")
+        # Remove the spinner after loading is done
+        loading_placeholder.empty()
+
+        # Heading centered
+        st.markdown(
+            "<h3 style='text-align: center;'>Recommended Movies</h3>",
+            unsafe_allow_html=True
+        )
+
+        # First row: first 5 recommendations
+        row1 = st.columns(5)
+        for i in range(5):
+            with row1[i]:
+                st.image(posters[i], use_container_width=True)
+                st.markdown(f"<p style='text-align: center;'>{names[i]}</p>", unsafe_allow_html=True)
+
+        # Second row: next 5 recommendations
+        row2 = st.columns(5)
+        for i in range(5, 10):
+            with row2[i - 5]:
+                st.image(posters[i], use_container_width=True)
+                st.markdown(f"<p style='text-align: center;'>{names[i]}</p>", unsafe_allow_html=True)
+
+    except Exception as e:
+        loading_placeholder.empty()
+        st.error(f"Something went wrong: {e}")
+
