@@ -1,52 +1,50 @@
-# 🎬 Movie Recommendation System :
+# 🎬 Movie Recommendation System
 
-This is a machine learning-powered movie recommendation system that suggests the top 10 similar movies based on a user's selected title. Built using Python and a clean Streamlit interface, it lets users quickly discover movies similar to the one they love.
+This is a machine learning-powered movie recommendation system that suggests the top 10 movies similar to a user's selected title. Built using Python and a Streamlit frontend, the application allows users to quickly discover movies they might enjoy based on their preferences.
 
-👉 [Live Demo on Render](https://movie-recommender-system-1-h7uj.onrender.com)
+~ [Live Demo on Render](https://movie-recommender-system-1-h7uj.onrender.com)
 
 
-### 🔍 Features
-🔎 Search any movie from the database and receive top 10 similar recommendations
+### Features : 
+Search any movie from the dataset and receive real-time recommendations
 
-🧠 Uses content-based filtering with machine learning
+Content-based filtering using machine learning to find similar movies
 
-🎨 Sleek, interactive UI built with Streamlit
+Interactive UI built with Streamlit for a smooth user experience
 
-🖼️ Displays movie posters with titles in a responsive layout
+Posters and movie titles displayed in a clean, responsive layout
 
-☁️ Hosted on Render for easy web access
+Deployed on Render, accessible from any browser without local setup
 
-### 🛠️ Tech Stack
-Python (core logic and data handling)
+### Tech Stack : 
+Python – Core programming language for backend logic and data handling
 
-Pandas, Scikit-learn for data manipulation & ML
+Pandas & Scikit-learn – For data manipulation and building the recommendation model
 
-Streamlit for frontend user interface
+Streamlit – Used for building the user-facing web application
 
-Render for cloud deployment
+Render – For deploying the application in the cloud
 
-TMDB API for fetching movie details and posters
+TMDB API – Used to fetch movie posters, titles, and metadata
 
-### 📊 Data & API
-The movie data is based on a dataset retrieved from The Movie Database (TMDB)
+### Data and API :
+The recommendation system is built using a movie metadata dataset sourced from The Movie Database (TMDB). It relies on the TMDB API to:
 
-The application uses the TMDB API to fetch:
+Retrieve movie details
 
-Movie details
+Display high-quality movie posters
 
-Posters
+Enhance the recommendations with real-world metadata
 
-Metadata used for recommendations
+##### Note : A valid TMDB API key is required to access the movie data. The key is securely managed in the backend and is not exposed publicly.
 
-🔐 Note: A valid TMDB API key is required to fetch data. The key is securely handled in the backend and not exposed to users.
+### How it Works : 
+The user selects or searches for a movie from the dropdown list
 
-### 🚀 How it Works
-User selects a movie title
+The app uses cosine similarity to identify the top 10 most similar movies from the dataset
 
-The ML model computes cosine similarity based on movie metadata
+These recommendations are displayed in two rows, each containing 5 movies, along with their posters and titles
 
-The app returns 10 visually rich recommendations (with posters and names), in a 2-row layout
-
-📎 Live Project
-🎥 Check out the app here:
+Live Project
+🎥 Try it out here:
 👉 https://movie-recommender-system-1-h7uj.onrender.com
