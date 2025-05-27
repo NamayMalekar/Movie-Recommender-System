@@ -1,9 +1,10 @@
 🎬 Movie Recommendation System
 This is a machine learning-powered movie recommendation system that suggests the top 10 similar movies based on a user's selected title. Built using Python and a clean Streamlit interface, it lets users quickly discover movies similar to the one they love.
 
-👉 Live Demo on Render
+👉 [Live Demo on Render](https://movie-recommender-system-1-h7uj.onrender.com)
 
-🔍 Features
+
+## 🔍 Features
 🔎 Search any movie from the database and receive top 10 similar recommendations
 
 🧠 Uses content-based filtering with machine learning
